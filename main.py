@@ -1,18 +1,19 @@
-def function1():
-    print("Pratham called")
+def hello():
+    print("Hello, world!")
+    print("Hello Tanmay")
 
-def function2():
-    print("Paridhi called")
+hello()
 
-# Define a dictionary mapping cases to functions
-cases = {
-    1: function1,
-    2: function2
-}
 
-# Ask the user to input a number
-n = int(input("Enter a number (1 or 2): "))
+#priyanshu 
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n - 1):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
 
-# Use a dictionary to emulate switch behavior
-# Get the function corresponding to the input number and call it
-cases.get(n, lambda: print("Invalid input."))()
+
+arr = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(arr)
+print("Sorted array:", arr)
